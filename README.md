@@ -6,7 +6,7 @@
 
 This repository contains a LaTeX résumé template that is generated from content specified in a `yaml` file.
 
-This repository was (strongly) inspired by the code from [cv-biolerplate](https://github.com/mrzool/cv-boilerplate), but I found the `Pandoc` template notation to be cumbersome, so I rewrote the code to use an `ERB` template.
+This repository was (strongly) inspired by the code from [cv-boilerplate](https://github.com/mrzool/cv-boilerplate), but I found the `Pandoc` template notation to be cumbersome, so I rewrote the code to use an `ERB` template.
 
 The original developer of `cv-boilerplate`, Mattia Tezzele, deserves considerable thanks for the initial implementation and concept.
 
