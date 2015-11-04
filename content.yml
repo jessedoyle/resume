@@ -1,0 +1,142 @@
+---
+# Personal details
+name: Jesse Doyle
+address: |
+  4617 48 Street,
+  Camrose AB,
+  T4V 1K9
+phone: "780.678.6455"
+email: jdoyle@ualberta.ca
+website: jessedoyle.me
+github: jessedoyle
+
+# Sections
+intro: >
+  Recent computing science graduate with more than 3 years experience writing web applications using Ruby on Rails as a backend framework.
+  Avid open source contributer and participating member in the Ruby community. Seeking a full-time web development position located in the Edmonton area.
+
+experience:
+- years: '11/2013 -- 10/2015'
+  employer: 'Terrace Safety Ltd'
+  job: 'Rails Developer - Freelance via Sprocket Systems, Inc.'
+  city: 'Camrose, AB'
+  points:
+    - 'Developed a custom web application built with Ruby on Rails (\href{https://terracesafety.com}{https://terracesafety.com}).'
+    - 'Deployed application to Amazon infrastructure, including EC2 for server compute capacity and S3 for user uploads/backup.'
+    - '\emph{Backend}: Rails 4.1, RSpec + Capybara, Devise, MySQL, Apache + Phusion Passenger, Git.'
+    - '\emph{Frontend}: jQuery, HighCharts, ZURB Foundation 4, SASS.'
+    - 'Setup and maintained corporate email accounts using Rackpsace.'
+    - 'Provided IT support for approximately 10 internal employees and a userbase of more than 200 independent contractors.'
+- years: '07/2013 -- 11/2013'
+  employer: Vital Effect
+  job: 'Web Developer - 4 Month Contract'
+  city: 'Camrose, AB'
+  points:
+    - 'Contributed to the development of an automated WordPress generator/hosting web application \\(\href{http://therocketnerd.com}{http://therocketnerd.com}).'
+    - 'Wrote PHP code to integrate with the NameCheap, Aviary SDK and PayPal NVP APIs.'
+    - 'Developed a deep understanding of the WordPress database structure, as well as WordPress theme and plugin development.'
+- years: '02/2007 -- 07/2013'
+  employer: Staples Canada
+  job: Technology Sales Area Representative
+  city: 'Camrose, AB'
+  points:
+    - 'Expected to meet strong sales goals in both technology products and their complimentary attachment products or services.'
+    - 'Covered vacations as resident technician. Diagnosed and repaired both hardware and software issues.'
+    - 'Achieved Apple Sales Professional recognition in 2012 by completing optional retail training.'
+    - '\emph{Member}, Joint Health and Safety Comittee. Participated in monthly meetings to ensure a safe retail environment.'
+
+education:
+- year: '2009 -- 2013'
+  degree: BSc
+  subject: Computing Science
+  institute: University of Alberta
+  faculty: Augustana Campus
+  minor: Mathematics
+  city: 'Camrose, AB'
+  points:
+    - 'Cumulative GPA: 3.74'
+    - '\emph{Project Member}: University of Alberta graduate application system web application, developed as a proof-of-concept using the Ruby on Rails framework in 2012.'
+
+skills:
+- title: 'Web Development'
+  experience: '3 Years Experience'
+  points:
+    - 'Strong understanding of web standards such as HTML5, CSS3 and cross-browser ECMAScript.'
+    - 'Familiar with frontend CSS frameworks such as ZURB Foundation and Bootstrap as well as client side libraries such as jQuery.'
+    - 'Practical knowledge of Model/View/Controller design paradigms.'
+    - 'Familiar with standard development techniques such as responsive design, AJAX and RESTful design.'
+    - 'Experience with WordPress and writing custom PHP code.'
+- title: 'Ruby Programming'
+  experience: '3 Years Experience'
+  points:
+    - 'Experience writing clean, readable code that conforms to the \href{https://github.com/bbatsov/ruby-style-guide}{Ruby style guide}.'
+    - 'Solid understanding of Ruby on Rails and its surrounding ecosystem such as Sprockets, Turbolinks and Rack.'
+    - 'Experience developing and releasing custom gems deployed to RubyGems.'
+    - 'Experience testing via RSpec and using tools such as Rubocop, Guard and Rake.'
+- title: 'Java Programming'
+  experience: '3 Years Experience'
+  points:
+    - 'Practical application of Java threading techniques and developing concurrent applications.'
+    - 'Strong proficiency with object-oriented design principles.'
+    - 'Experience with the Lightweight Java Game Library and basic OpenGL development.'
+- title: 'C Programming'
+  experience: '2 Years Experience'
+  points:
+    - 'Familiarity writing ANSI C utilizing POSIX standard libraries. Knowledge of many standard system calls such as fork and exec.'
+    - 'Experience with UNIX/TCP socket programming to develop client/server applications.'
+- title: 'Database'
+  experience: '2 Years Experience'
+  points:
+    - 'Practical and theoretical understanding of relational database concepts and design.'
+    - 'Experience modeling efficient database designs from scratch using ER-Diagrams.'
+    - 'Experience administering MySQL databases at a command-line level.'
+- title: 'Other'
+  points:
+    - 'Tools: \cmu{\LaTeX}, \body{Git, continuous integration using TravisCI.}'
+    - 'Familiar with a UNIX-based development environment using Bash/ZSH, VIM, Make, SSH.'
+    - 'Experience developing in SCHEME (R6RS) and PROLOG for small programming problems.'
+    - 'Experience writing reliable, well-tested code in the \href{http://crystal-lang.org}{Crystal Programming Language}.'
+
+# Settings
+fonts:
+  title:
+    name: Source Sans Pro Light
+    color: '060606'
+    scale: '2.618'
+    letter_space: '20'
+    word_space: '2'
+  heading:
+    name: Source Sans Pro Light
+    color: '000000'
+    scale: '1'
+    letter_space: '20'
+  subheading:
+    name: Source Sans Pro
+    scale: '1.112'
+    color: '060606'
+  subsubheading:
+    name: Source Sans Pro Light Italic
+    scale: '1.112'
+    color: '7D7D7D'
+  body:
+    name: Source Sans Pro Light
+    color: '000000'
+    scale: '1'
+  contact:
+    name: Source Sans Pro Light
+    color: '000000'
+    scale: '1'
+    letter_space: '20'
+    word_space: '2'
+  cmu:
+    name: CMU Serif Roman
+    color: '000000'
+    scale: '1'
+fontsize: 16pt
+line_height: '1.25'
+mainfont: Source Sans Pro
+vertical_rhythm: 2.5mm
+link_color: '0, 118, 223'
+# A4 Paper => 210mm x 297mm
+geometry: 'a4paper, textwidth=150mm, textheight=240mm, marginparsep=0mm, marginparwidth=30mm'
+---

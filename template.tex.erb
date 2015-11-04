@@ -1,0 +1,143 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[<%= d['fontsize'] %>, a4paper]{article}
+
+% Margins
+%--------------------------------
+\usepackage{geometry}
+\geometry{<%= d['geometry'] %>}
+
+% LAYOUT
+%--------------------------------
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{setspace}
+
+\titlespacing{\section}{0mm}{<%= d['vertical_rhythm'] %>}{0mm}
+
+% Do not indent paragraphs
+\setlength\parindent{0mm}
+\setlength\parskip{<%= d['vertical_rhythm'] %>}
+
+% Uncomment to suppress page numbers
+\pagenumbering{gobble}
+
+% TYPOGRAPHY
+%--------------------------------
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+
+\defaultfontfeatures{Mapping=tex-text, Ligatures=TeX}
+\setromanfont{<%= d['mainfont'] %>}
+
+% Initialize custom fonts
+<% d['fonts'].each do |style, font| %>
+\newfontfamily{\<%= style %>}<%= font_spec_options(style) %>{<%= font['name'] %>}
+<% end %>
+
+\newcommand{\alignleftright}[2]{
+  \begin{minipage}{100mm}
+    \flushleft{#1}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{50mm}
+    \flushright{#2}
+  \end{minipage}
+}
+
+\newcommand{\bodyprose}[1]{\setstretch{<%= d['line_height'] %>}{\body{#1}}}
+\newcommand{\contactinfo}[1]{\setstretch{<%= d['line_height'] %>}{\contact{#1}}}
+\newcommand{\listprose}[1]{\setstretch{1}{\body{#1}}}
+\newcommand{\movedown}{\vspace{<%= d['vertical_rhythm'] %>}}
+
+\titleformat*{\section}{\bfseries\heading}
+\titleformat*{\subsection}{\subheading}
+\titleformat*{\subsubsection}{\subsubheading}
+
+% PDF SETUP
+%--------------------------------
+\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdftitle={<%= d['name'] %>'s Résumé}, pdfauthor={<%= d['name'] %>}]{hyperref}
+\hypersetup{linkcolor=[RGB]{<%= d['link_color'] %>}, citecolor=blue, filecolor=black, urlcolor=[RGB]{<%= d['link_color'] %>}}
+
+% DOCUMENT
+%--------------------------------
+\begin{document}
+\begin{center}
+\title{\uppercase{<%= d['name'] %>}}\\
+\movedown
+\movedown
+\contact{\uppercase{<%= d['address'] %>} \textbf{TEL} <%= d['phone'] %>\\}
+\movedown
+\contact{
+  \textbf{GITHUB} \href{https://github.com/<%= d['github'] %>}{\lowercase{@<%= d['github'] %>}}
+  \hfill
+  \textbf{EMAIL} \href{mailto:<%= d['email'] %>}{\lowercase{<%= d['email'] %>}}
+  \hfill
+  \textbf{WEB} \href{http://<%= d['website'] %>}{\lowercase{<%= d['website'] %>}}
+}
+\end{center}
+
+\section*{PROFILE}
+\bodyprose{<%= d['intro'] %>}
+
+\section*{EDUCATION}
+<% d['education'].each do |v| %>
+\par{
+  \subheading{
+    \alignleftright{\textsc{<%= v['faculty'] ? "#{v['institute']}, #{v['faculty']}" : v['institute'] %>}}{<%= v['year'] %>}
+  }
+  \subsubheading{
+    <% if v['degree'] %><%= "#{v['degree']}. " %><% end %><%= v['subject'] %><% if v['minor'] %><%= ", #{v['minor']} Minor" %><% end %>
+  }
+  <% if v['points'] && v['points'].any? %>
+  \listprose{
+    \begin{itemize}[labelsep=5mm, leftmargin=*, topsep=-1mm, itemsep=1mm]
+      <% v['points'].each do |p| %>
+      \item <%= p %>
+      <% end %>
+    \end{itemize}
+  }
+  <% end %>
+}
+<% end %>
+
+\section*{EXPERIENCE}
+<% d['experience'].each do |e| %>
+\par{
+  \subheading{\alignleftright{\textsc{<%= "#{e['employer']} - #{e['city']}" %>}}{<%= e['years'] %>}}
+  \subsubheading{<%= e['job'] %>}
+  <% if e['points'] && e['points'].any? %>
+  \listprose{
+    \begin{itemize}[labelsep=5mm, leftmargin=*, topsep=-1mm, itemsep=0mm]
+      <% e['points'].each do |p| %>
+      \item <%= p %>
+      <% end %>
+    \end{itemize}
+  }
+  <% end %>
+}
+<% end %>
+
+\section*{SKILLS}
+\bodyprose{Technically proficient in many aspects of software development, including an in-depth knowledge in the following areas:}
+<% d['skills'].each do |s| %>
+\par{
+  \subheading{\alignleftright{\textsc{<%= s['title'] %>}}{<%= s['experience'] %>}}
+  <% if s['points'] && s['points'].any? %>
+  \listprose{
+    \begin{itemize}[labelsep=2mm, leftmargin=*, topsep=-<%= d['vertical_rhythm'] %>, itemsep=0mm]
+      <% s['points'].each do |p| %>
+      \item <%= p %>
+      <% end %>
+    \end{itemize}
+  }
+  <% end %>
+}
+\movedown
+<% end %>
+
+\section*{REFERENCES}
+\bodyprose{Available upon request.}
+\end{document}
