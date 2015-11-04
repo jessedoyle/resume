@@ -17,7 +17,6 @@ class TemplateEngine
   end
 
   def build
-    puts OUTPUT_DIR
     FileUtils.mkdir_p OUTPUT_DIR unless Dir.exist? OUTPUT_DIR
     output = build_erb
     !!File.write(File.join(OUTPUT_DIR, output_file), output)
