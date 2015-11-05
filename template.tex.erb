@@ -127,7 +127,7 @@
   \subheading{\alignleftright{\textsc{<%= s['title'] %>}}{<%= s['experience'] %>}}
   <% if s['points'] && s['points'].any? %>
   \listprose{
-    \begin{itemize}[labelsep=2mm, leftmargin=*, topsep=-<%= d['vertical_rhythm'] %>, itemsep=0mm]
+    \begin{itemize}[labelsep=5mm, leftmargin=*, topsep=-<%= d['vertical_rhythm'] %>, itemsep=0mm]
       <% s['points'].each do |p| %>
       \item <%= p %>
       <% end %>

@@ -61,7 +61,7 @@ skills:
 - title: 'Web Development'
   experience: '3 Years Experience'
   points:
-    - 'Strong understanding of web standards such as HTML5, CSS3 and cross-browser ECMAScript.'
+    - 'Proficiency with modern web standards such as HTML5, CSS3 and cross-browser ECMAScript.'
     - 'Familiar with frontend CSS frameworks such as ZURB Foundation and Bootstrap as well as client side libraries such as jQuery.'
     - 'Practical knowledge of Model/View/Controller design paradigms.'
     - 'Familiar with standard development techniques such as responsive design, AJAX and RESTful design.'
@@ -88,7 +88,7 @@ skills:
   experience: '2 Years Experience'
   points:
     - 'Practical and theoretical understanding of relational database concepts and design.'
-    - 'Experience modeling efficient database designs from scratch using ER-Diagrams.'
+    - 'Experience modelling efficient database designs from scratch using ER-Diagrams.'
     - 'Experience administering MySQL databases at a command-line level.'
 - title: 'Other'
   points:
